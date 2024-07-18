@@ -15,8 +15,7 @@ AMovingPlatform::AMovingPlatform()
 void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
-
-	MyVector.Y = MyX;
+	SetActorLocation(MyVector);
 }
 
 // Called every frame
