@@ -54,7 +54,9 @@ void AMovingPlatform::MovePlatform(float DeltaTime)
 
 void AMovingPlatform::RotatePlatform(float DeltaTime)
 {
-	UE_LOG(LogTemp, Display, TEXT("%s Rotating..."), *GetName());
+	FRotator CurrentRotation = GetActorRotation();
+	CurrentRotation = CurrentRotation + RotationVelocity * DeltaTime;
+	SetActorRotation(CurrentRotation);
 }
 
 bool AMovingPlatform::ShouldPlatformReturn() const
