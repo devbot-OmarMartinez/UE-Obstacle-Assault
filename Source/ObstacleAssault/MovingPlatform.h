@@ -30,4 +30,9 @@ public:
 	float MoveDistance = 100;
 
 	FVector StartLocation;
+
+	void MovePlatform(float DeltaTime);
+	void RotatePlatform(float DeltaTime);
+	bool ShouldPlatformReturn();
+	float GetDistanceMoved();
 };
